@@ -6,10 +6,10 @@
 </head>
 
 <body>
-   <?php include('nav.php');  ?>
-   <?php include('db-connect.php');?>
+    <?php include('nav.php');  ?>
+    <?php include('db-connect.php');?>
     <form action="update-course.php" method="post">
-    <?php
+        <?php
         $course_id=$_GET['course_id'];
 
         $sql="SELECT * FROM t_courses WHERE course_id=".$course_id;
@@ -22,10 +22,10 @@
         }
 
     ?>
-
-    <fieldset id="subfield">
-    <legend>Subject Removal</legend>
-    <?php
+            <!--Subject Removal-->
+            <fieldset id="subfield">
+                <legend>Subject Removal</legend>
+                <?php
         $sql2='SELECT * FROM t_subjects JOIN jnct_courses_subjects ON subject_id=subject_fk WHERE course_fk='.$course_id;
 
 
@@ -38,8 +38,28 @@
 
     ?>
 
-    </fieldset>
-    <input type="submit" value="update">
+            </fieldset>
+
+            <!--Subject Addition-->
+            <fieldset id="subfield">
+                <legend>Subject Add</legend>
+                <?php
+        $sql3='SELECT subject_id, subject_name FROM t_subjects WHERE subject_id NOT IN (SELECT subject_fk FROM jnct_courses_subjects WHERE course_fk='.$course_id.')';
+
+
+            $result3=mysqli_query($con,$sql3);
+
+            while ($row3=mysqli_fetch_array($result3)){
+                echo '<input type="checkbox" value="'.$row3['subject_id'].'" name="toadd[]">'.$row3['subject_name'].'<br> ';
+
+            }
+
+    ?>
+
+            </fieldset>
+
+
+            <input type="submit" value="update">
     </form>
 
 

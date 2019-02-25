@@ -15,6 +15,7 @@
         $course_id=$_POST['course_id'];
         $course_name=$_POST['course_name'];
         $todelete=$_POST['todelete'];
+        $toadd=$_POST['toadd'];
 
         //update t_courses table
         $sql='UPDATE t_courses SET course_name="'.$course_name.'" WHERE course_id='.$course_id;
@@ -31,12 +32,25 @@
             $sql='DELETE FROM jnct_courses_subjects WHERE course_fk='.$course_id.' AND subject_fk='.$todelete[$i];
 
             if(mysqli_query($con,$sql)){
-                echo 'subject successfully removed';
+                echo '<br>subject successfully removed';
             }
             else{
-                echo 'subject removal unsuccesful';
+                echo '<br>subject removal unsuccesful';
             }
         }
+
+        //addition of subjects to course
+        for($i=0;$i<count($toadd);$i++){
+            $sql='INSERT INTO jnct_courses_subjects (course_fk,subject_fk) VALUES ('.$course_id.','.$toadd[$i].')';
+
+            if(mysqli_query($con,$sql)){
+                echo '<br>subject successfully added';
+            }
+            else{
+                echo '<br>subject add unsuccesful';
+            }
+        }
+
 
     ?>
 
