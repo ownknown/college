@@ -2,6 +2,9 @@ html,body{
     margin:0px;
     padding:0px;
 }
+#main{
+    margin-left:10px;
+}
 
 nav{
     background-color:aliceblue;

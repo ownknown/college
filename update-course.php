@@ -6,9 +6,9 @@
     <meta http-equiv="refresh" content="1;url=show-courses.php" />
 </head>
 
-<body>
+<body> <div id="wrapper">
     <?php include('nav.php');  ?>
-    <?php include('db-connect.php');?>
+    <?php include('db-connect.php');?><div id="main">
 
     <?php
         //assign all post values to variables
@@ -54,8 +54,8 @@
 
     ?>
 
-    <?php mysqli_close($con); ?>
+    </div><?php mysqli_close($con); ?>
 
-</body>
+</div></body>
 
 </html>

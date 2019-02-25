@@ -5,9 +5,9 @@
     <title>Edit subject</title>
 </head>
 
-<body>
+<body> <div id="wrapper">
     <?php include('nav.php');  ?>
-    <?php include('db-connect.php');?>
+    <?php include('db-connect.php');?><div id="main">
     <form action="update-subject.php" method="post">
         <?php
         $subject_id=$_GET['subject_id'];
@@ -29,8 +29,8 @@
 
 
 
-    <?php mysqli_close($con); ?>
+    </div><?php mysqli_close($con); ?>
 
-</body>
+</div></body>
 
 </html>

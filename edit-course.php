@@ -5,9 +5,9 @@
     <title>Edit Course</title>
 </head>
 
-<body>
+<body> <div id="wrapper">
     <?php include('nav.php');  ?>
-    <?php include('db-connect.php');?>
+    <?php include('db-connect.php');?><div id="main">
     <form action="update-course.php" method="post">
         <?php
         $course_id=$_GET['course_id'];
@@ -64,8 +64,8 @@
 
 
 
-    <?php mysqli_close($con); ?>
+    </div><?php mysqli_close($con); ?>
 
-</body>
+</div></body>
 
 </html>

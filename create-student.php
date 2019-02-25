@@ -7,9 +7,9 @@
     </style>
 </head>
 
-<body>
+<body> <div id="wrapper">
    <?php include('nav.php');  ?>
-   <?php include('db-connect.php');?>
+   <?php include('db-connect.php');?><div id="main">
 
     <form action="insert-student.php" method="post">
         forename: <input type="text" name="forename"><br>
@@ -34,8 +34,8 @@
         <input type="submit" value="Create Student">
     </form>
 
-    <?php mysqli_close($con); ?>
+    </div><?php mysqli_close($con); ?>
 
-</body>
+</div></body>
 
 </html>

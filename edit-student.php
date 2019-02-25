@@ -5,7 +5,7 @@
     <title>Edit Student</title>
 </head>
 
-<body>
+<body> <div id="wrapper">
    <?php include('nav.php');  ?>
     <?php
     $con = mysqli_connect("localhost", "root", "root", "DB_COLLEGE");
@@ -45,6 +45,6 @@
     mysqli_close($con);
     ?>
 
-</body>
+</div></body>
 
 </html>

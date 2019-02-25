@@ -6,18 +6,20 @@
 </head>
 
 <body>
-    <?php include('nav.php');  ?>
-    <?php include('db-connect.php');?>
-<a href="create-course.php">Create Course</a>
-<table>
-   <tr>
-       <td>id</td>
-       <td>course</td>
-       <td>edit</td>
-       <td>delete</td>
-       <td>subjects</td>
-   </tr>
-    <?php
+    <div id="wrapper">
+        <?php include('nav.php');  ?>
+        <?php include('db-connect.php');?>
+        <div id="main">
+            <a href="create-course.php">Create Course</a>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>course</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                    <th>subjects</th>
+                </tr>
+                <?php
     //put whatever code you want to execute here.
         $sql="SELECT * FROM t_courses";
 
@@ -48,9 +50,11 @@
         }
 
     ?>
-    </table>
-    <?php mysqli_close($con); ?>
+            </table>
+        </div>
+        <?php mysqli_close($con); ?>
 
+    </div>
 </body>
 
 </html>

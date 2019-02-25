@@ -5,21 +5,21 @@
     <title>Show Students</title>
 </head>
 
-<body>
+<body> <div id="wrapper">
     <?php include('nav.php');  ?>
-    <?php include('db-connect.php');?>
+    <?php include('db-connect.php');?><div id="main">
 
 <a href="create-student.php">Create Student</a>
 <table>
    <tr>
-       <td>id</td>
-       <td>forename</td>
-       <td>surname</td>
-       <td>address</td>
-       <td>dob</td>
-       <td>phone</td>
-       <td>edit</td>
-       <td>delete</td>
+       <th>id</th>
+       <th>forename</th>
+       <th>surname</th>
+       <th>address</th>
+       <th>dob</th>
+       <th>phone</th>
+       <th>edit</th>
+       <th>delete</th>
    </tr>
     <?php
     //put whatever code you want to execute here.
@@ -43,8 +43,8 @@
 
     ?>
     </table>
-    <?php mysqli_close($con); ?>
+    </div><?php mysqli_close($con); ?>
 
-</body>
+</div></body>
 
 </html>

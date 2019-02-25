@@ -6,17 +6,19 @@
 </head>
 
 <body>
-    <?php include('nav.php');  ?>
-    <?php include('db-connect.php');?>
-<a href="create-subject.php">Create Subject</a>
-<table>
-   <tr>
-       <td>id</td>
-       <td>subject</td>
-       <td>edit</td>
-       <td>delete</td>
-   </tr>
-    <?php
+    <div id="wrapper">
+        <?php include('nav.php');  ?>
+        <?php include('db-connect.php');?>
+        <div id="main">
+            <a href="create-subject.php">Create Subject</a>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>subject</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                </tr>
+                <?php
     //put whatever code you want to execute here.
         $sql="SELECT * FROM t_subjects";
 
@@ -33,9 +35,11 @@
         }
 
     ?>
-    </table>
-    <?php mysqli_close($con); ?>
+            </table>
+        </div>
+        <?php mysqli_close($con); ?>
 
+    </div>
 </body>
 
 </html>
