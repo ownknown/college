@@ -2,8 +2,7 @@
 
 <head>
     <link href="style1.css" type="text/css" rel="stylesheet">
-    <title>Update Student</title>
-    <meta http-equiv="refresh" content="1;url=show-students.php" />
+    <title>Upload</title>
 </head>
 
 <body>
@@ -12,21 +11,9 @@
         <?php include('db-connect.php');?>
         <div id="main">
 
+
             <?php
-        $student_id=$_POST['student_id'];
-        $forename=$_POST['forename'];
-        $surname=$_POST['surname'];
-        $address=$_POST['address'];
-        $dob=$_POST['dob'];
-        $phone=$_POST['phone'];
-
-  ?>
-
-                <!--Upload Student Image-->
-
-
-                <?php
-$target_dir = "student-images/";
+$target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
@@ -70,25 +57,6 @@ if ($uploadOk == 0) {
 }
 ?>
 
-
-
-                    <!--     End Upload student Image-->
-                    <?php
-        $sql='UPDATE t_students SET forename="'.$forename.'", surname="'.$surname.'",address="'.$address.'",dob="'.$dob.'",phone="'.$phone.'",image="'.$_FILES['fileToUpload']['name'].'" WHERE student_id='.$student_id;
-
-       echo $sql;
-
-       if(mysqli_query($con,$sql)){
-           echo 'The student '.$forename.' '.$surname.' was successfully updated';
-
-       }
-       else{
-           echo 'Oooppps! Student update unsuccesful!';
-
-       }
-
-
-    ?>
 
 
         </div>
