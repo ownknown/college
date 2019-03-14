@@ -37,3 +37,14 @@ td {
     margin-top: 10px;
     width: 150px;
 }
+
+img {
+    margin: 10px;
+    border: 1px solid grey;
+}
+
+input[type=text] {
+    clear: both;
+    background-color: aqua;
+    margin: 10px;
+}
