@@ -2,6 +2,7 @@
     <a href="show-students.php">Students</a>
     <a href="show-courses.php">Courses</a>
     <a href="show-subjects.php">Subjects</a> ::
+    <a href="logout.php">Logout</a>
     <a href="get-code.php?filename=<?php
 $currentFile = $_SERVER['PHP_SELF'];
 $parts = Explode('/', $currentFile);

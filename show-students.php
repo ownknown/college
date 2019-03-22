@@ -1,3 +1,4 @@
+<?php include('session.php');?>
 <html>
 
 <head>
@@ -5,23 +6,25 @@
     <title>Show Students</title>
 </head>
 
-<body> <div id="wrapper">
-    <?php include('nav.php');  ?>
-    <?php include('db-connect.php');?><div id="main">
+<body>
+    <div id="wrapper">
+        <?php include('nav.php');  ?>
+        <?php include('db-connect.php');?>
+        <div id="main">
 
-<a href="create-student.php">Create Student</a>
-<table>
-   <tr>
-       <th>id</th>
-       <th>forename</th>
-       <th>surname</th>
-       <th>address</th>
-       <th>dob</th>
-       <th>phone</th>
-       <th>edit</th>
-       <th>delete</th>
-   </tr>
-    <?php
+            <a href="create-student.php">Create Student</a>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>forename</th>
+                    <th>surname</th>
+                    <th>address</th>
+                    <th>dob</th>
+                    <th>phone</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                </tr>
+                <?php
     //put whatever code you want to execute here.
         $sql="SELECT * FROM t_students";
 
@@ -42,9 +45,11 @@
         }
 
     ?>
-    </table>
-    </div><?php mysqli_close($con); ?>
+            </table>
+        </div>
+        <?php mysqli_close($con); ?>
 
-</div></body>
+    </div>
+</body>
 
 </html>

@@ -1,4 +1,4 @@
-<html>
+<?php include('session.php');?><html>
 
 <head>
     <link href="style1.css" type="text/css" rel="stylesheet">

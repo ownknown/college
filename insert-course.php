@@ -1,18 +1,23 @@
+<?php include('session.php');?>
 <html>
 
 <head>
     <link href="style1.css" type="text/css" rel="stylesheet">
     <title>Create Course</title>
     <style>
+
+
     </style>
     <meta http-equiv="refresh" content="1;url=show-courses.php" />
 </head>
 
-<body> <div id="wrapper">
-   <?php include('nav.php');  ?>
-   <?php include('db-connect.php');?><div id="main">
+<body>
+    <div id="wrapper">
+        <?php include('nav.php');  ?>
+        <?php include('db-connect.php');?>
+        <div id="main">
 
-    <?php
+            <?php
         $course_name=$_POST['course_name'];
 
 
@@ -29,8 +34,10 @@
 
     ?>
 
-    </div><?php mysqli_close($con); ?>
+        </div>
+        <?php mysqli_close($con); ?>
 
-</div></body>
+    </div>
+</body>
 
 </html>
