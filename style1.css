@@ -9,7 +9,7 @@ body {
 }
 
 nav {
-    background-color: black;
+    background-color: aliceblue;
     margin-bottom: 10px;
     padding: 10px;
 }
@@ -44,7 +44,6 @@ img {
 }
 
 input[type=text] {
+    display: block;
     clear: both;
-    background-color: aqua;
-    margin: 10px;
 }
