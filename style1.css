@@ -43,7 +43,7 @@ input[type=text] {
     clear: both;
 }
 
-student-image {
+#student-image {
     border: 1px solid black;
     width: 100px;
 }
