@@ -20,6 +20,7 @@
                     <th>surname</th>
                     <th>address</th>
                     <th>dob</th>
+                    <th>image</th>
                     <th>phone</th>
                     <th>edit</th>
                     <th>delete</th>
@@ -39,6 +40,7 @@
             echo '<td>'.$row['address'].'</td>';
             echo '<td>'.$row['dob'].'</td>';
             echo '<td>'.$row['phone'].'</td>';
+            echo '<td><img id="student-image" src="student-images/'.$row['image'].'"></td>';
             echo '<td><a href="edit-student.php?student_id='.$row['student_id'].'"><img src="edit.png"></td>';
             echo '<td><a href="delete-student.php?student_id='.$row['student_id'].'"><img src="delete.png"></td>';
             echo '</tr>';

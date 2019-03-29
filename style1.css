@@ -38,12 +38,12 @@ td {
     width: 150px;
 }
 
-img {
-    margin: 10px;
-    border: 1px solid grey;
-}
-
 input[type=text] {
     display: block;
     clear: both;
+}
+
+student-image {
+    border: 1px solid black;
+    width: 100px;
 }
