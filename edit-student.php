@@ -1,7 +1,8 @@
-<?php include('session.php');?><html>
+<?php include('session.php');?>
+<html>
 
 <head>
-    <link href="style1.css" type="text/css" rel="stylesheet">
+    <link href="style1.css?v=<?=time();?>" type="text/css" rel="stylesheet">
     <title>Edit Student</title>
 </head>
 
