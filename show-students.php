@@ -20,8 +20,9 @@
                     <th>surname</th>
                     <th>address</th>
                     <th>dob</th>
-                    <th>image</th>
                     <th>phone</th>
+                    <th>image</th>
+                    <th>mark</th>
                     <th>edit</th>
                     <th>delete</th>
                 </tr>
@@ -40,7 +41,13 @@
             echo '<td>'.$row['address'].'</td>';
             echo '<td>'.$row['dob'].'</td>';
             echo '<td>'.$row['phone'].'</td>';
-            echo '<td><img id="student-image" src="student-images/'.$row['image'].'"></td>';
+            echo '<td><img id="student-image" src="student-images/';
+            //test for image/avatar
+            if($row['image']==''){ echo 'unknown-avatar.png'; } else{ echo $row['image']; }
+            echo '"></td>';
+
+            echo '<td><a href="bookmark-student.php?student_id='. $row['student_id'].'"><img src="bookmark.png"/></a></td>';
+
             echo '<td><a href="edit-student.php?student_id='.$row['student_id'].'"><img src="edit.png"></td>';
             echo '<td><a href="delete-student.php?student_id='.$row['student_id'].'"><img src="delete.png"></td>';
             echo '</tr>';

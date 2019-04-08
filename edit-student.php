@@ -8,10 +8,13 @@
 
 <body>
     <div id="wrapper">
+
         <?php include('nav.php');  ?>
         <?php include('db-connect.php');  ?>
-        <form action="update-student.php" method="post" enctype="multipart/form-data">
-            <?php
+
+        <div id="main">
+            <form action="update-student.php" method="post" enctype="multipart/form-data">
+                <?php
         $student_id=$_GET['student_id'];
 
         $sql="SELECT * FROM t_students WHERE student_id=".$student_id;
@@ -27,25 +30,27 @@
             echo '<label>dob:</label>  <input type="text" name="dob" value="'.$row['dob'].'"><br>';
             echo '<label>phone:</label>  <input type="text" name="phone" value="'.$row['phone'].'"><br>';
 
-            echo '<img src="student-images/'.$row['image'].'">';
+            echo '<img src="student-images/';
+            if($row['image']==''){ echo 'unknown-avatar.png'; } else{ echo $row['image']; }
+            echo '">';
 
 
         }
 
     ?>
-                <hr> Student Image Upload:<br>
-                <input type="file" name="fileToUpload" id="fileToUpload">
+                    <hr> Student Image Upload:<br>
+                    <input type="file" name="fileToUpload" id="fileToUpload">
 
-                <hr>
-                <input type="submit" value="update">
-        </form>
+                    <hr>
+                    <input type="submit" value="update">
+            </form>
 
 
-        <?php
+            <?php
     //All connections once you have used them for what you want should be closed
     mysqli_close($con);
     ?>
-
+        </div>
     </div>
 </body>
 

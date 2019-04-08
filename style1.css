@@ -8,6 +8,13 @@ body {
     margin-left: 10px;
 }
 
+#home-icon {
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+    filter: invert(1);
+}
+
 nav {
     background-color: aliceblue;
     margin-bottom: 10px;
@@ -46,4 +53,20 @@ input[type=text] {
 img#student-image {
     border: 1px solid black;
     width: 50px;
+}
+
+section {
+    float: left;
+    border: 1px grey solid;
+    padding: 10px;
+    margin: 20px;
+}
+
+#student-details {
+    color: white;
+    position: relative;
+    top: -25px;
+    left: 5px;
+    text-shadow: 2px 2px #000000;
+    ;
 }
