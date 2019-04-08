@@ -14,16 +14,11 @@
 
 
         <div class="main">
-
-
-
             <?php
-
 $student_id=$_GET['student_id'];
 
 if(!isset($_SESSION['bookmarks'])){
     $bookmarksArr = array(); //Create the bookmark array
-
     $_SESSION['bookmarks'] = $bookmarksArr; //Add the array to the Session Array
 }
 

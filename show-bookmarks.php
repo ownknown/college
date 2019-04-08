@@ -37,7 +37,7 @@ else{
                             <?php
     }?>
 
-                                <span id="student-details"><?
+                                <span id="student-details"><?php
 
  echo $row1['forename'].' '.$row1['surname'].'<br/>';?>
 
