@@ -1,4 +1,4 @@
-<?php require_once('session.php'); ?>
+<?php include('session.php'); ?>
 <html>
 
 <head>
@@ -9,8 +9,8 @@
 
 <body>
     <div id="wrapper">
-        <?php require_once('nav.php');  ?>
-        <?php require_once('db-connect.php');  ?>
+        <?php include('nav.php');  ?>
+        <?php include('db-connect.php');  ?>
 
 
         <div class="main">
@@ -26,22 +26,29 @@ array_push($_SESSION['bookmarks'],$student_id);
 
 
 
-$sql = 'SELECT * FROM t_students,t_courses WHERE student_id='.$student_id.' AND course_fk=course_id';
+$sql = 'SELECT * FROM t_students WHERE student_id='.$student_id;
+
 $result = mysqli_query($con,$sql);
 
-$row1 = mysqli_fetch_array($result);
+$row = mysqli_fetch_array($result);
 ?>
 
 
                 <?php
-    echo $row1['forename'].' '.$row1['surname'].'<br/>';
-    echo $row1['address'].'<br/>';
-    echo $row1['phone'].'<br/>';
-    echo $row1['course_name'].'<br/>';
+    echo $row['forename'].' '.$row['surname'].'<br/>';
+    echo $row['address'].'<br/>';
+    echo $row['phone'].'<br/>';
 ?>
                     <!--Student Image-->
-                    <div class="tile">
-                        <img src="student-images/<?php echo $row1['image'];?>" alt="student image" /><br/>
+                    <div id="student-image">
+                        <img src="student-images/<?php
+                        if($row['image']==''){
+                            echo 'unknown-avatar.png';
+                        } else{
+                            echo $row['image'];
+                        }
+
+                        ?>" alt="student image"><br/>
                     </div>
 
         </div>

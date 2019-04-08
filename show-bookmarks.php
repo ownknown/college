@@ -15,7 +15,7 @@
             <?php
 if(isset($_SESSION['bookmarks'])){
     foreach($_SESSION['bookmarks'] as $item){
-        $sql = 'SELECT student_id, forename, surname, phone,address, course_name, image FROM t_students JOIN t_courses ON course_fk=course_id WHERE student_id='.$item;
+        $sql = 'SELECT student_id, forename, surname, phone,address, image FROM t_students WHERE student_id='.$item;
         $result = mysqli_query($con,$sql);
         $row1 = mysqli_fetch_array($result);
 
