@@ -1,7 +1,7 @@
 <?php require_once('session.php'); ?>
 <html>
 
-<head>
+<head>     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show Bookmarks
     </title>
     <link href="style1.css" rel="stylesheet" type="text/css" />

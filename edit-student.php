@@ -1,7 +1,7 @@
 <?php include('session.php');?>
 <html>
 
-<head>
+<head>     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style1.css?v=<?=time();?>" type="text/css" rel="stylesheet">
     <title>Edit Student</title>
 </head>

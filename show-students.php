@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style1.css" type="text/css" rel="stylesheet">
     <title>Show Students</title>
 </head>

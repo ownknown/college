@@ -1,7 +1,7 @@
 <?php include('session.php'); ?>
 <html>
 
-<head>
+<head>     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bookmark student</title>
     <link href="style1.css" rel="stylesheet" type="text/css" />
     <meta http-equiv="refresh" content="2;URL=show-students.php">
